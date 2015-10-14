@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" /> 
+	<title>BuscaRut - UACH</title>
+	<link rel="shortcut icon" href="./img/favicon.png" />
+ 	<link rel="stylesheet" href="./css/style.css">
+	<script type="text/javascript">
+		var baseUrl="https://secure01.uach.cl/fotografias/0";
+		var extension=".jpg";
+		var input;
+		var in_data="" ;
+		var full_url="";
+		var image;
+		var img_url;
+		var get_in=function(){
+			in_data=input.value.trim();
+			while(in_data.indexOf(".")!=-1||in_data.indexOf("-")!=-1){
+				in_data=in_data.replace(".","");
+				in_data=in_data.replace("-","");
+			}
+			if(in_data.length!=0){
+				full_url=baseUrl+in_data+extension;
+				loadImg();
+			}
+		};
+		var loadImg=function(){
+			image=document.getElementById("photo");
+			image.src=full_url;
+			img_url.innerHTML="<font color=red>URL imagen: </font>"+full_url;
+		};
+	</script>
+</head>
+<body>
+	<center>
+		<div class="text">Página creada con fines educativos</div>
+		<div class="text_blood">Cualquier persona puede acceder a tu foto!!</div><br>
+		<div class="text">Escribe tu rut</div>
+		<input type="text" autofocus id="input">
+		<input type="button" value="Busca!" onclick="get_in()"><br><br>
+		<img src="./img/no_photo.jpg" id="photo" width="186px" height="248px">
+		<div id="img_url"></div>
+		<script type="text/javascript">
+			input=document.getElementById("input");
+			img_url=document.getElementById("img_url");
+		</script>
+	</center>
+</body>
+</html>

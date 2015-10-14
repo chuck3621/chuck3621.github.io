@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "font2";
+    src: url('../font/font2.ttf');
+}
+
+body{
+	color:white;
+	background: black;
+}
+.text_blood{
+	color:red;
+	font-family: "font2";
+	font-size: 40px;
+}
+.text{
+	font-size: 30px;
+}
+img{
+	border: solid darkblue 4px;
+}
