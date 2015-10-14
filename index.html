@@ -32,9 +32,20 @@
 	</script>
 </head>
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=540751192710739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 	<center>
 		<div class="text">Página creada con fines educativos</div>
-		<div class="text">funciona solamente para alumnos de la UACH</div>
 		<div class="text_blood">Cualquier persona puede acceder a tu foto!!</div><br>
 		<div class="text">Escribe tu rut</div>
 		<input type="text" autofocus id="input">
@@ -45,6 +56,8 @@
 			input=document.getElementById("input");
 			img_url=document.getElementById("img_url");
 		</script>
+		
+	<div class="fb-comments" data-href="http://chuck3621.github.io/" data-width="500" data-numposts="15"></div>
 	</center>
 </body>
 </html>
